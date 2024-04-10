@@ -8,7 +8,7 @@
   <style>
     body {
       font-family: 'Roboto', sans-serif;
-      background-image: url('https://images.unsplash.com/photo-1527949295833-43490279c50a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwyMDc5MTB8MHwxfGFsbHwxfHx8fHx8fHx8fDE2MjQ5MzkwNjg&ixlib=rb-1.2.1&q=80&w=4000'); /* Updated background image */
+      background-image: url('https://images.unsplash.com/photo-1527949295833-43490279c50a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwyMDc5MTB8MHwxfGFsbHwxfHx8fHx8fHx8fDE2MjQ5MzkwNjg&ixlib=rb-1.2.1&q=80&w=4000');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -18,9 +18,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
     }
     .container {
+      width: 90%;
       max-width: 600px;
       padding: 20px;
       background-color: rgba(0, 0, 0, 0.7);
@@ -29,7 +30,7 @@
       text-align: center;
     }
     h1 {
-      font-size: 2.5rem;
+      font-size: 2rem;
       margin-bottom: 20px;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
@@ -38,14 +39,15 @@
       animation: fadeIn 2s ease;
     }
     p {
-      font-size: 1.2rem;
-      line-height: 1.5;
+      font-size: 1.1rem;
+      line-height: 1.6;
     }
     .message:hover {
       background-color: rgba(255, 255, 255, 0.1);
     }
     .btn-submit {
       padding: 10px 20px;
+      font-size: 1rem;
       background-color: #4CAF50;
       color: #fff;
       border: none;
@@ -66,11 +68,6 @@
         transform: translateY(0);
       }
     }
-    @media screen and (max-width: 768px) {
-      .container {
-        width: 90%;
-      }
-    }
   </style>
 </head>
 <body>
@@ -87,7 +84,9 @@
 
 <script>
   function submitForm() {
-    location.reload(); // Reload the website when the form is submitted
+    setTimeout(function() {
+      location.reload(); // Reload the website after a delay when the form is submitted
+    }, 1000); // Delay in milliseconds (1000ms = 1 second)
   }
 </script>
 
